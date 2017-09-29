@@ -1,0 +1,31 @@
+{
+  "name": "the-inner-self",
+  "version": "1.0.0",
+  "description": "program determines if you are more like a man or women",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ankitashah212/The-Inner-Self.git"
+  },
+  "keywords": [
+    "git",
+    "node",
+    "express.js",
+    "node.js",
+    "server",
+    "fullstack"
+  ],
+  "author": "ashah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ankitashah212/The-Inner-Self/issues"
+  },
+  "homepage": "https://github.com/Ankitashah212/The-Inner-Self#readme",
+  "dependencies": {
+    "express": "^4.16.0"
+  }
+}
