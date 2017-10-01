@@ -1,5 +1,16 @@
-// Dependencies
 var http = require("http");
 var fs = require("fs");
 var PORT = 8080;
-var server = http.createServer(handleRequest);
+
+var express = require("express");
+var bodyParser = require("body-parser");
+var path = require("path");
+
+//Set up express app
+
+var app = express();
+var PORT = 3000;
+
+app.listen(PORT, function () {
+    console.log("App listening on PORT " + PORT);
+});
