@@ -9,7 +9,9 @@ var path = require("path");
 //Set up express app
 
 var app = express();
-var PORT = 3000;
+const PORT = process.env.Port || 3000;
+
+//make the port dynamic
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
