@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>FriendFinder</title>
+    <title>Do you wanna be Evil?</title>
 
     <!-- Latest compiled and minified CSS & JS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
@@ -22,23 +22,27 @@
 </head>
 
 <body>
+    <style>
+    body{
+        color: #1B1B46;
+        background-color: #F3C5E9;
+    }
+    </style>
 
-    <div class="container">
+    <div class="container"> 
 
-        <h2>Survey Questions</h2>
+        <h1>What kind of evil are you ?</h1>
         <hr>
 
-        <h3><strong>About You</strong></h3>
-        <h4>Name (Required)</h4>
+        <h3>Name (Required)</h3>
         <input type="text" name="" id="name" class="form-control" required>
 
-        <h4>Link to Photo Image (Required)</h4>
+        <h3>Link to Photo Image (Required)</h3>
         <input type="text" name="" id="photo" class="form-control" required>
 
         <hr>
 
-        <h3><strong>Question 1</strong></h3>
-        <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+        <h3> 1. I would rather kill my victims then punish them indefinately</h3>
         <select data-placeholder="" class="chosen-select" id="q1">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -48,8 +52,7 @@
             <option value="5">5 (Strongly Agree)</option>
       	</select>
 
-        <h3><strong>Question 2</strong></h3>
-        <h4>Generally speaking, you rely more on your experience than your imagination.</h4>
+        <h3>2. When I monologue I tend to be more threatening than boastful.</h3>
         <select data-placeholder="" class="chosen-select" id="q2">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -59,9 +62,7 @@
             <option value="5">5 (Strongly Agree)</option>
       	</select>
 
-
-        <h3><strong>Question 3</strong></h3>
-        <h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
+        <h3>3. I like grand entances.</h3>
         <select data-placeholder="" class="chosen-select" id="q3">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -71,9 +72,7 @@
             <option value="5">5 (Strongly Agree)</option>
       	</select>
 
-
-        <h3><strong>Question 4</strong></h3>
-        <h4>You rarely do something just out of sheer curiosity.</h4>
+     <h3>4. I am creatively cruel.</h3>
         <select data-placeholder="" class="chosen-select" id="q4">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -83,9 +82,7 @@
             <option value="5">5 (Strongly Agree)</option>
       	</select>
 
-
-        <h3><strong>Question 5</strong></h3>
-        <h4>People can rarely upset you.</h4>
+        <h3>5. I want to destoy every good thing on the earth.</h3>
         <select data-placeholder="" class="chosen-select" id="q5">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -95,9 +92,7 @@
             <option value="5">5 (Strongly Agree)</option>
       	</select>
 
-
-        <h3><strong>Question 6</strong></h3>
-        <h4>It is often difficult for you to relate to other people’s feelings.</h4>
+      <h3>6. I especially hate my family .</h3>
         <select data-placeholder="" class="chosen-select" id="q6">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -107,9 +102,7 @@
             <option value="5">5 (Strongly Agree)</option>
       	</select>
 
-
-        <h3><strong>Question 7</strong></h3>
-        <h4>In a discussion, truth should be more important than people’s sensitivities.</h4>
+     <h3>7. I love my pets.</h3>
         <select data-placeholder="" class="chosen-select" id="q7">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -119,8 +112,7 @@
             <option value="5">5 (Strongly Agree)</option>
       	</select>
 
-        <h3><strong>Question 8</strong></h3>
-        <h4>You rarely get carried away by fantasies and ideas.</h4>
+          <h3>8. I love pretty princesses.</h3>
         <select data-placeholder="" class="chosen-select" id="q8">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -130,8 +122,7 @@
             <option value="5">5 (Strongly Agree)</option>
       	</select>
 
-        <h3><strong>Question 9</strong></h3>
-        <h4>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h4>
+        <h3>9. I like to sing.</h3>
         <select data-placeholder="" class="chosen-select" id="q9">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -141,8 +132,7 @@
             <option value="5">5 (Strongly Agree)</option>
       	</select>
 
-        <h3><strong>Question 10</strong></h3>
-        <h4>You feel more energetic after spending time with a group of people.</h4>
+        <h3>10. I am an egomaniac.</h3>
         <select data-placeholder="" class="chosen-select" id="q10">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -156,13 +146,13 @@
         <br>
 
         <!-- Submit Button -->
-        <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
- Submit</button>
+        <button type="submit" class="btn btn-danger btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
+ I am ready</button>
 
         <hr>
         <footer class="footer">
             <div class="container">
-                <p><a href="/all" Available Personas</a> | <a href="https://github.com/Ankitashah212">GitHub Repo</a></p>
+                <p><a href="/api/char"> Available Personas</a> | <a href="https://github.com/Ankitashah212">GitHub Repo</a></p>
             </div>
         </footer>
 
@@ -176,7 +166,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h2 class="modal-title"><strong>Best Match</strong></h2>
+                    <h2 class="modal-title"><strong>You are......</strong></h2>
                 </div>
                 <div class="modal-body">
                     <h2 id="matchName"></h2>
@@ -225,11 +215,15 @@
             // If all required fields are filled
             if (validateForm() == true) {
                 // Create an object for the user's data
+                var qualities = [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(),]
+
                 var userData = {
                     name: $("#name").val(),
                     photo: $("#photo").val(),
-                    scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(),]
+                    qualities
                 }
+
+
 
                 console.log(userData);
 
@@ -238,14 +232,14 @@
 
                 // AJAX post the data to the friends API. 
                 $.post(currentURL + "/api/char", userData, function (data) {
-
-                    // Grab the result from the AJAX post so that the best match's name and photo are displayed.
-                    $("#matchName").text(data.name);
-                    $('#matchImg').attr("src", data.photo);
-
-                    // Show the modal with the best match 
-                    $("#resultsModal").modal('toggle');
-
+                    
+                                        // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+                                        $("#matchName").text(data.name);
+                                       $('#matchImg').attr("src", data.src);
+                    
+                                        // Show the modal with the best match 
+                                        $("#resultsModal").modal('toggle');
+                    
                 });
             }
             else {

@@ -13,17 +13,23 @@ module.exports = function(app){
 
         res.json(chars);
 
+        console.log(chars);
+
     });
 
 // API Requests
     
     app.post('/api/char', function(req, res){
 
-        console.log('req.body.name: ' + req.body.name);
-        console.log('req.body.scores: ' + req.body.scores);
-
-    
-
+        var newChar = req.body;
+      
+        console.log(newChar.name);
+        console.log(newChar);
+        console.log(newChar.qualities);
+        
+        chars.push(req.body);
+        res.json(chars[0]);
+        
     });
 
 };
