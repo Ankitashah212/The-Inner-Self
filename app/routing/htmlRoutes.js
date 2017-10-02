@@ -1,4 +1,12 @@
-var http = require("http");
-var fs = require("fs");
-var PORT = 8080;
-var server = http.createServer(handleRequest);
+var path = require('path');
+
+module.exports = function(app){
+
+	app.get('/', function(req, res){
+        res.sendFile(path.join(__dirname + '/../public/home.html'));
+    });
+
+    app.get('/survey', function(req,res){
+    	res.sendFile(path.join(__dirname + '/../public/survey.html'));
+    });
+}

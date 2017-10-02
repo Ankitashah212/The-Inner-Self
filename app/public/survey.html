@@ -162,7 +162,7 @@
         <hr>
         <footer class="footer">
             <div class="container">
-                <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/afhaque/friendfinder">GitHub Repo</a></p>
+                <p><a href="/all" Available Personas</a> | <a href="https://github.com/Ankitashah212">GitHub Repo</a></p>
             </div>
         </footer>
 
@@ -231,12 +231,13 @@
                     scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(),]
                 }
 
+                console.log(userData);
 
                 // Grab the URL of the website
                 var currentURL = window.location.origin;
 
                 // AJAX post the data to the friends API. 
-                $.post(currentURL + "/api/friends", userData, function (data) {
+                $.post(currentURL + "/api/char", userData, function (data) {
 
                     // Grab the result from the AJAX post so that the best match's name and photo are displayed.
                     $("#matchName").text(data.name);
