@@ -23,13 +23,13 @@
 
 <body>
     <style>
-    body{
-        color: #1B1B46;
-        background-color: #F3C5E9;
-    }
+        body {
+            color: #1B1B46;
+            background-color: #F3C5E9;
+        }
     </style>
 
-    <div class="container"> 
+    <div class="container">
 
         <h1>What kind of evil are you ?</h1>
         <hr>
@@ -72,7 +72,7 @@
             <option value="5">5 (Strongly Agree)</option>
       	</select>
 
-     <h3>4. I am creatively cruel.</h3>
+        <h3>4. I am creatively cruel.</h3>
         <select data-placeholder="" class="chosen-select" id="q4">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -92,7 +92,7 @@
             <option value="5">5 (Strongly Agree)</option>
       	</select>
 
-      <h3>6. I especially hate my family .</h3>
+        <h3>6. I especially hate my family .</h3>
         <select data-placeholder="" class="chosen-select" id="q6">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -102,7 +102,7 @@
             <option value="5">5 (Strongly Agree)</option>
       	</select>
 
-     <h3>7. I love my pets.</h3>
+        <h3>7. I love my pets.</h3>
         <select data-placeholder="" class="chosen-select" id="q7">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -112,7 +112,7 @@
             <option value="5">5 (Strongly Agree)</option>
       	</select>
 
-          <h3>8. I love pretty princesses.</h3>
+        <h3>8. I love pretty princesses.</h3>
         <select data-placeholder="" class="chosen-select" id="q8">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -173,7 +173,7 @@
                     <img id="matchImg" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
                 </div>
                 <div class="modal-footer">
-                    <button id = "refresh" type="refresh" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <a href="/">Close</a>
                 </div>
             </div>
 
@@ -232,15 +232,17 @@
                 // Grab the URL of the website
                 var currentURL = window.location.origin;
 
-                // AJAX post the data to the friends API. 
+                // AJAX  
                 $.post(currentURL + "/api/char", userData, function (data) {
-                    
-                                        // Grab the result from the AJAX post so that the best match's name and photo are displayed.
-                                        $("#matchName").text(data.name);
-                                       $('#matchImg').attr("src", data.src);
-                    
-                                        // Show the modal with the best match 
-                                        $("#resultsModal").modal('toggle');
+                    $("#matchName").text(data.name);
+                    $('#matchImg').attr("src", data.src);
+
+                    // Show your evil match 
+                    $("#resultsModal").modal('toggle');
+
+                    //need to clear data
+                    $('#name').val('');
+                    $('#photo').val('');
                     
                 });
             }

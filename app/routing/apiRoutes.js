@@ -32,6 +32,7 @@ module.exports = function (app) {
         for (let q = 0; q < chars.length; q++) {
             myDifferences[q] = 0;
         }
+        console.log(chars.length);
 
         //for each input benchmark (question)
         for (let i = 0; i < newChar.qualities.length; i++) {
@@ -47,7 +48,7 @@ module.exports = function (app) {
             }
 
         }
-
+        console.log(myDifferences);
         var winner = 0;
         var currScore = 0;
         for (let p = 0; p < myDifferences.length; p++) {
@@ -58,7 +59,6 @@ module.exports = function (app) {
             }
         }
 
-        chars.push(req.body);
         res.json(chars[winner]);
 
     });
