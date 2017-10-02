@@ -22,7 +22,7 @@ module.exports = function (app) {
     app.post('/api/char', function (req, res) {
 
         var newChar = req.body;
-       
+
         console.log(newChar.qualities.length);
 
         //fun name
@@ -32,10 +32,6 @@ module.exports = function (app) {
         for (let q = 0; q < chars.length; q++) {
             myDifferences[q] = 0;
         }
-
-        console.log("before");
-        console.log(myDifferences);
-    
 
         //for each input benchmark (question)
         for (let i = 0; i < newChar.qualities.length; i++) {
@@ -47,15 +43,23 @@ module.exports = function (app) {
                 diff = diff + myDifferences[j];
                 myDifferences.splice(j, 1);
                 myDifferences.splice(j, 0, diff);
-             
+
             }
 
         }
-        console.log("after");
-        console.log(myDifferences);
-        
+
+        var winner = 0;
+        var currScore = 0;
+        for (let p = 0; p < myDifferences.length; p++) {
+
+            if (myDifferences[p] > currScore) {
+                currScore = myDifferences[p];
+                winner = p;
+            }
+        }
+
         chars.push(req.body);
-        res.json(chars[0]);
+        res.json(chars[winner]);
 
     });
 

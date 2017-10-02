@@ -146,7 +146,7 @@
         <br>
 
         <!-- Submit Button -->
-        <button type="submit" class="btn btn-danger btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
+        <button type="button" class="btn btn-danger btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
  I am ready</button>
 
         <hr>
@@ -173,7 +173,7 @@
                     <img id="matchImg" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button id = "refresh" type="refresh" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
 
@@ -193,6 +193,8 @@
             $(selector).chosen(config[selector]);
         }
 
+        $("#refresh").on("click", function () {
+        });
         // Capture the form inputs 
         $("#submit").on("click", function () {
 
