@@ -1,5 +1,5 @@
 //var load data
-var chars = require('../data/BenchmarkChar.js');
+var chars = require('../data/benchmarkChar.js');
 var path = require('path');
 
 
@@ -48,7 +48,7 @@ module.exports = function (app) {
             }
 
         }
-       // console.log(myDifferences);
+        console.log(myDifferences);
         var winner = 0;
         var currScore = 50;
         //going thru array to find out the lowest score
