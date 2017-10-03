@@ -23,16 +23,16 @@ module.exports = function (app) {
 
         var newChar = req.body;
 
-        console.log(newChar.qualities.length);
+       // console.log(newChar.qualities.length);
 
         //fun name
         var myDifferences = [];
 
-        //initializing the array with 0 differences 
+        //initializing the array with 0 differences
         for (let q = 0; q < chars.length; q++) {
             myDifferences[q] = 0;
         }
-        console.log(chars.length);
+       // console.log(chars.length);
 
         //for each input benchmark (question)
         for (let i = 0; i < newChar.qualities.length; i++) {
@@ -48,12 +48,13 @@ module.exports = function (app) {
             }
 
         }
-        console.log(myDifferences);
+       // console.log(myDifferences);
         var winner = 0;
-        var currScore = 0;
+        var currScore = 50;
+        //going thru array to find out the lowest score
         for (let p = 0; p < myDifferences.length; p++) {
 
-            if (myDifferences[p] > currScore) {
+            if (myDifferences[p] < currScore) {
                 currScore = myDifferences[p];
                 winner = p;
             }
